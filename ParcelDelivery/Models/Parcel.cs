@@ -23,7 +23,7 @@ namespace ParcelDelivery.Models
 
     public void CostToShip()
     {
-      Price = Volume * Weight * 1.05;
+      Price = Math.Round((Volume * Weight * 1.05), 2);
     }
   }
 

@@ -23,13 +23,13 @@ namespace ParcelDelivery.Controllers
     {
       try
       {
-        if (String.IsNullOrWhiteSpace(weight) || String.IsNullOrWhiteSpace(height) || String.IsNullOrWhiteSpace(boxlength) || String.IsNullOrWhiteSpace(width))
+        if (String.IsNullOrWhiteSpace(weight) || String.IsNullOrWhiteSpace(height) || String.IsNullOrWhiteSpace(boxlength) || String.IsNullOrWhiteSpace(width) || width == "0" || height == "0" || weight == "0" || boxlength == "0")
         {
           throw new System.InvalidOperationException("Invalid input");
         } 
         else
         {
-          double doubleHeight = double.Parse(height, System.Globalization.NumberStyles.AllowDecimalPoint);
+          double doubleHeight = double.Parse(height);
           double doubleWidth = double.Parse(width);
           double doubleLength = double.Parse(boxlength);
           double doubleWeight = double.Parse(weight);
