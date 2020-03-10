@@ -1,17 +1,25 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Delivery.Models;
+using ParcelDelivery.Models;
 using System;
 
-namespace Delivery.Tests
+namespace ParcelDelivery.Tests
 {
   [TestClass]
-  public class MakeFilesTests
+  public class ParcelTests
   {
     [TestMethod]
-    public void MethodName_WhatItDoes_ReturnObject()
+    public void CostToShip_CalculatesCost_Price()
     {
-
+      Parcel newParcel = new Parcel(1,1,1,1);
+      newParcel.CostToShip();
+      Assert.AreEqual(1.05, newParcel.Price);
     }
 
+    [TestMethod]
+    public void ParcelConstructor_CalculatesVolume_1()
+    {
+      Parcel newParcel = new Parcel(1,1,1,1);
+      Assert.AreEqual(1, newParcel.Volume);
+    }
   }
 }
