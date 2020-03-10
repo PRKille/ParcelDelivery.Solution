@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shipping Price</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <div class="container">
+      <div class="well">
+        <h2>Your package has the following dimensions:</h2>
+        <ul>
+          <li>Height: @Model.Height feet</li>
+          <li>Width: @Model.Width feet</li>
+          <li>Length: @Model.BoxLength feet</li>
+          <li>Weight: @Model.Weight pounds</li>
+          <li>Volume: @Model.Volume ft^3</li>
+        </ul>
+        <h3>Price to ship: $@Model.Price</h3>
+        <p><a href="/">Click here</a> to ship another package.</p>
+      </div>
+    </div>
+  </body>
+</html>
